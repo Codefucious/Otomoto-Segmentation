@@ -1,8 +1,7 @@
 # Otomoto Marketing Segmentation Optimization
 ## Technical Report: Artificial Neural Network Optimization for Customer Churn Prediction
 
-**Lead ML Expert**
-**Otomoto Analytics Division**
+**Rowland M Bernard**
 **January 2026**
 
 ---
@@ -680,7 +679,51 @@ This optimization effort represents a significant step forward in Otomoto's anal
 
 ## References
 
-See [REFERENCES.md](./REFERENCES.md) for complete bibliography in PhD citation style.
+**Adam Optimizer:**
+Kingma, D. P., & Ba, J. (2014). Adam: A Method for Stochastic Optimization. *arXiv preprint arXiv:1412.6980*. https://arxiv.org/abs/1412.6980
+
+**Customer Churn Prediction:**
+Neslin, S. A., Gupta, S., Kamakura, W., Lu, J., & Mason, C. H. (2006). Defection detection: Measuring and understanding the predictive accuracy of customer churn models. *Journal of Marketing Research*, 43(2), 204-211. https://doi.org/10.1509/jmkr.43.2.204
+
+Verbeke, W., Dejaeger, K., Martens, D., Hur, J., & Baesens, B. (2012). New insights into churn prediction in the telecommunication sector: A profit driven data mining approach. *Expert Systems with Applications*, 39(7), 6593-6602. https://doi.org/10.1016/j.eswa.2011.12.059
+
+**Neural Networks for Churn Prediction:**
+Amin, A., Shehab, M., Alansari, Z., & Alhammadi, A. (2019). Churn prediction in telecommunication sector using machine learning and deep learning techniques. *Neurocomputing*, 367, 111-123. https://doi.org/10.1016/j.neucom.2019.08.080
+
+Ibbini, M. S., Al-Ayyoub, M., & Al-Kabi, M. N. (2021). An automated churn prediction model using deep neural networks. *Journal of Ambient Intelligence and Humanized Computing*, 12(12), 10917-10928. https://doi.org/10.1007/s12652-021-03116-4
+
+**RMSprop Optimizer:**
+Tieleman, T., & Hinton, G. (2012). Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent magnitude. *COURSERA: Neural Networks for Machine Learning*. University of Toronto.
+
+**SGD with Momentum:**
+Sutskever, I., Martens, J., Dahl, G., & Hinton, G. (2013). On the importance of initialization and momentum in deep learning. *International Conference on Machine Learning*, 1139-1147. https://doi.org/10.1109/ICML.2013.12
+
+**Adagrad Optimizer:**
+Duchi, J., Hazan, E., & Singer, Y. (2011). Adaptive subgradient methods for online learning and stochastic optimization. *Journal of Machine Learning Research*, 12, 2121-2159. https://doi.org/10.5555/1953048.1953073
+
+**Batch Normalization:**
+Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing internal covariate shift. *International Conference on Machine Learning*, 448-456. https://doi.org/10.1109/ICML.2015.89
+
+**Dropout Regularization:**
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: A simple way to prevent neural networks from overfitting. *Journal of Machine Learning Research*, 15(1), 1929-1958. https://doi.org/10.5555/2617275.2620361
+
+**Marketing Segmentation:**
+Kumar, V., & Reinartz, W. (2018). Customer relationship management: Theory, practice, and research challenges. *Journal of Interactive Marketing*, 42, 1-19. https://doi.org/10.1016/j.intmar.2018.04.004
+
+McCarty, J. A., & Hastak, M. (2007). Segmentation approaches in data-mining: A comparison of segmentation methods. *Journal of Marketing Research*, 44(2), 371-384. https://doi.org/10.1509/jmkr.44.2.371
+
+**Early Stopping:**
+Prechelt, L. (1998). Early stopping-but when? In *Neural Networks: Tricks of the trade* (pp. 55-69). Springer. https://doi.org/10.1007/3-540-49430-8_3
+
+**Marketing Applications of Machine Learning:**
+Lemmens, A., & Croux, C. (2006). Bagging and boosting classification trees to predict churn. *Journal of Marketing Research*, 43(2), 276-286. https://doi.org/10.1509/jmkr.43.2.276
+
+Ascarza, E., Ebbes, P., & Orlin, J. (2022). When is adding customer characteristics to churn prediction models worth it? *Journal of Marketing Research*, 59(3), 447-461. https://doi.org/10.1177/00222437211054227
+
+**Telecommunications Industry Applications:**
+Coussement, K., & Van den Poel, D. (2008). Improving customer attrition prediction by integrating emotions information in relational data mining. *Decision Support Systems*, 44(1), 216-229. https://doi.org/10.1016/j.dss.2007.03.014
+
+*Additional references available in [REFERENCES.md](./REFERENCES.md) for complete bibliography in PhD citation style.*
 
 ---
 

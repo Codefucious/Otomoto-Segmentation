@@ -1,5 +1,8 @@
 # Otomoto ANN Model Documentation
 
+**Rowland M Bernard**
+**January 2026**
+
 ## Overview
 
 This document provides comprehensive technical documentation for the Artificial Neural Network (ANN) models developed for Otomoto's customer churn prediction and marketing segmentation system.
