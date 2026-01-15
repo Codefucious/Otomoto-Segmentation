@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.1">
+  <diagram name="Optimization Algorithm Comparison" id="optimization_comparison">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#FF6B35;" value="Optimization Algorithm Comparison" vertex="1">
+          <mxGeometry height="40" width="467" x="180" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#424242;" value="Baseline SGD" vertex="1">
+          <mxGeometry height="30" width="120" x="50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=left;verticalAlign=top;fontSize=11;" value="• Vanilla SGD&#xa;• Learning Rate: 0.01&#xa;• No Momentum&#xa;• Fixed LR&#xa;• Simple Implementation&#xa;&#xa;Weaknesses:&#xa;• Slow convergence&#xa;• No adaptation&#xa;• Sensitive to LR" vertex="1">
+          <mxGeometry height="180" width="140" x="50" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1976D2;" value="Adam" vertex="1">
+          <mxGeometry height="30" width="120" x="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=left;verticalAlign=top;fontSize=11;" value="• Adaptive Moment Estimation&#xa;• LR: 0.001, β₁=0.9, β₂=0.999&#xa;• Momentum + RMSprop&#xa;• Per-parameter LR&#xa;• Fast convergence&#xa;&#xa;Advantages:&#xa;• Robust to noisy data&#xa;• Minimal tuning&#xa;• Sparse gradient handling" vertex="1">
+          <mxGeometry height="180" width="140" x="220" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rmsprop_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#388E3C;" value="RMSprop" vertex="1">
+          <mxGeometry height="30" width="120" x="390" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rmsprop_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#2E7D32;fontColor=#2E7D32;align=left;verticalAlign=top;fontSize=11;" value="• Root Mean Square Propagation&#xa;• LR: 0.001, ρ=0.9&#xa;• Exponential weighted avg&#xa;• Addresses AdaGrad decay&#xa;• Non-stationary objectives&#xa;&#xa;Advantages:&#xa;• Handles evolving patterns&#xa;• Lower memory than Adam&#xa;• Saddle point escape" vertex="1">
+          <mxGeometry height="180" width="140" x="390" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sgd_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#7B1FA2;" value="SGD + Momentum" vertex="1">
+          <mxGeometry height="30" width="120" x="560" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sgd_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontColor=#6A1B9A;align=left;verticalAlign=top;fontSize=11;" value="• SGD with Momentum&#xa;• LR: 0.01, μ=0.9&#xa;• Nesterov Acceleration&#xa;• Velocity accumulation&#xa;• Classical approach&#xa;&#xa;Advantages:&#xa;• Better generalization&#xa;• Local minima escape&#xa;• Reduced oscillations" vertex="1">
+          <mxGeometry height="180" width="140" x="560" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="adagrad_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#F57C00;" value="Adagrad" vertex="1">
+          <mxGeometry height="30" width="120" x="50" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="adagrad_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontColor=#E65100;align=left;verticalAlign=top;fontSize=11;" value="• Adaptive Gradient&#xa;• LR: 0.01, ε=1e-7&#xa;• Historical gradient accumulation&#xa;• Per-parameter adaptation&#xa;• Convex optimization&#xa;&#xa;Advantages:&#xa;• Sparse feature handling&#xa;• Feature-specific rates&#xa;• No LR tuning required" vertex="1">
+          <mxGeometry height="180" width="140" x="50" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="comparison_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#D32F2F;" value="Performance Comparison Framework" vertex="1">
+          <mxGeometry height="30" width="300" x="280" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="comparison_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57C00;fontColor=#F57C00;align=left;verticalAlign=top;fontSize=11;" value="Evaluation Metrics:&#xa;• Accuracy: Overall correctness&#xa;• Precision: Marketing efficiency&#xa;• Recall: Retention effectiveness&#xa;• F1-Score: Balanced performance&#xa;• ROC-AUC: Discriminative ability&#xa;• Loss: Training quality&#xa;&#xa;Business Context:&#xa;• False Negatives = Lost revenue&#xa;• False Positives = Wasted spend&#xa;• Optimize for F1-Score" vertex="1">
+          <mxGeometry height="180" width="420" x="220" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="performance_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#00796B;" value="Expected Performance Characteristics" vertex="1">
+          <mxGeometry height="30" width="350" x="50" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="matrix_container" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="200" width="650" x="50" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="header_empty" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="Optimizer" vertex="1">
+          <mxGeometry height="40" width="100" as="geometry" />
+        </mxCell>
+        <mxCell id="header_accuracy" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="Accuracy" vertex="1">
+          <mxGeometry height="40" width="100" x="110" as="geometry" />
+        </mxCell>
+        <mxCell id="header_f1" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="F1-Score" vertex="1">
+          <mxGeometry height="40" width="100" x="220" as="geometry" />
+        </mxCell>
+        <mxCell id="header_convergence" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="Convergence" vertex="1">
+          <mxGeometry height="40" width="100" x="330" as="geometry" />
+        </mxCell>
+        <mxCell id="header_stability" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="Stability" vertex="1">
+          <mxGeometry height="40" width="100" x="440" as="geometry" />
+        </mxCell>
+        <mxCell id="header_recommendation" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#424242;fontColor=#424242;fontStyle=1;align=center;" value="Use Case" vertex="1">
+          <mxGeometry height="40" width="100" x="550" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_label" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;" value="Baseline SGD" vertex="1">
+          <mxGeometry height="30" width="100" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_accuracy" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;fontSize=10;" value="73-78%" vertex="1">
+          <mxGeometry height="30" width="100" x="110" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_f1" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;fontSize=10;" value="0.55-0.65" vertex="1">
+          <mxGeometry height="30" width="100" x="220" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_conv" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;fontSize=10;" value="Slow" vertex="1">
+          <mxGeometry height="30" width="100" x="330" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_stab" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;fontSize=10;" value="Low" vertex="1">
+          <mxGeometry height="30" width="100" x="440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="baseline_rec" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontColor=#C62828;align=center;fontSize=10;" value="Reference" vertex="1">
+          <mxGeometry height="30" width="100" x="550" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_label" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;" value="Adam" vertex="1">
+          <mxGeometry height="30" width="100" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_accuracy" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;fontSize=10;" value="81-85%" vertex="1">
+          <mxGeometry height="30" width="100" x="110" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_f1" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;fontSize=10;" value="0.68-0.75" vertex="1">
+          <mxGeometry height="30" width="100" x="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_conv" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;fontSize=10;" value="Fast" vertex="1">
+          <mxGeometry height="30" width="100" x="330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_stab" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;fontSize=10;" value="High" vertex="1">
+          <mxGeometry height="30" width="100" x="440" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="adam_rec" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;align=center;fontSize=10;" value="Default Choice" vertex="1">
+          <mxGeometry height="30" width="100" x="550" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="others_label" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;" value="Others" vertex="1">
+          <mxGeometry height="30" width="100" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="others_accuracy" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;fontSize=10;" value="78-84%" vertex="1">
+          <mxGeometry height="30" width="100" x="110" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="others_f1" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;fontSize=10;" value="0.62-0.73" vertex="1">
+          <mxGeometry height="30" width="100" x="220" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="others_conv" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;fontSize=10;" value="Medium" vertex="1">
+          <mxGeometry height="30" width="100" x="330" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="others_stab" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;fontSize=10;" value="Medium" vertex="1">
+          <mxGeometry height="30" width="100" x="440" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="others_rec" parent="matrix_container" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;fontColor=#616161;align=center;fontSize=10;" value="Specific Cases" vertex="1">
+          <mxGeometry height="30" width="100" x="550" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="takeaways_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#D32F2F;" value="Key Takeaways for Otomoto" vertex="1">
+          <mxGeometry height="30" width="250" x="260" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="takeaways_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#2E7D32;fontColor=#2E7D32;align=left;verticalAlign=top;fontSize=11;" value="✓ Adam: Best overall performance&#xa;✓ RMSprop: Evolving customer patterns&#xa;✓ SGD+Mom: Better generalization&#xa;✓ Adagrad: Sparse categorical features&#xa;✓ All: Significant improvement over baseline&#xa;✓ Primary metric: F1-Score balance&#xa;✓ Business impact: 12-18% churn reduction" vertex="1">
+          <mxGeometry height="200" width="250" x="260" y="930" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

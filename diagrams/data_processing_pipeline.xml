@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.1">
+  <diagram name="Data Processing Pipeline" id="data_pipeline">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#FF6B35;" value="Data Processing Pipeline" vertex="1">
+          <mxGeometry height="40" width="347" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="raw_data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;fontColor=#01579B;fontStyle=1;align=center;verticalAlign=middle;" value="Raw Dataset&#xa;teleconnect.csv&#xa;7,043 records, 21 columns" vertex="1">
+          <mxGeometry height="80" width="140" x="350" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;fontSize=10;" value="Data Cleaning">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="160" as="sourcePoint" />
+            <mxPoint x="420" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cleaning" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontColor=#E65100;fontSize=11;align=left;verticalAlign=top;" value="Data Cleaning&#xa;• Remove customerID&#xa;• Convert TotalCharges&#xa;• Handle missing values&#xa;• Median imputation" vertex="1">
+          <mxGeometry height="100" width="180" x="330" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="300" as="sourcePoint" />
+            <mxPoint x="420" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="feature_eng" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#6A1B9A;fontColor=#6A1B9A;fontSize=11;align=left;verticalAlign=top;" value="Feature Engineering&#xa;&#xa;Binary Features (6):&#xa;• gender, Partner, Dependents&#xa;• PhoneService, PaperlessBilling&#xa;• Churn (target)&#xa;&#xa;Label Encoding" vertex="1">
+          <mxGeometry height="140" width="160" x="50" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="categorical" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#2E7D32;fontColor=#2E7D32;fontSize=11;align=left;verticalAlign=top;" value="Categorical Features (10):&#xa;• MultipleLines&#xa;• InternetService&#xa;• OnlineSecurity&#xa;• OnlineBackup&#xa;• DeviceProtection&#xa;• TechSupport&#xa;• StreamingTV&#xa;• StreamingMovies&#xa;• Contract&#xa;• PaymentMethod&#xa;&#xa;One-Hot Encoding" vertex="1">
+          <mxGeometry height="140" width="160" x="240" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="numerical" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#AD1457;fontColor=#AD1457;fontSize=11;align=left;verticalAlign=top;" value="Numerical Features (3):&#xa;• tenure&#xa;• MonthlyCharges&#xa;• TotalCharges&#xa;&#xa;StandardScaler&#xa;(Z-score normalization)" vertex="1">
+          <mxGeometry height="140" width="160" x="430" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="feature_dist" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57C00;fontColor=#F57C00;fontSize=11;align=left;verticalAlign=top;" value="Feature Distribution&#xa;After Processing:&#xa;• Total Features: 40&#xa;• Binary: 6&#xa;• One-Hot: 31&#xa;• Numerical: 3&#xa;&#xa;Target Distribution:&#xa;• No Churn: 73.5%&#xa;• Churn: 26.5%" vertex="1">
+          <mxGeometry height="140" width="160" x="620" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="320" y="480" as="sourcePoint" />
+            <mxPoint x="320" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="merged" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;fontColor=#00796B;fontSize=11;align=left;verticalAlign=top;" value="Feature Matrix&#xa;40 features x 7,043 samples&#xa;Data Types:&#xa;• Numerical (float64)&#xa;• Categorical (int64)&#xa;&#xa;Quality Checks:&#xa;• No missing values&#xa;• Properly scaled&#xa;• Correctly encoded" vertex="1">
+          <mxGeometry height="120" width="300" x="200" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;fontSize=10;" value="Train-Test Split">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="640" as="sourcePoint" />
+            <mxPoint x="420" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="split_container" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="440" x="200" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="train_set" parent="split_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#2E7D32;fontColor=#2E7D32;fontSize=11;align=left;verticalAlign=top;" value="Training Set&#xa;80% (5,634 records)&#xa;• Stratified&#xa;• Maintains class distribution&#xa;• Model training&#xa;• Validation split: 20%&#xa;  (Early stopping)" vertex="1">
+          <mxGeometry height="120" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="test_set" parent="split_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#E65100;fontColor=#E65100;fontSize=11;align=left;verticalAlign=top;" value="Test Set&#xa;20% (1,409 records)&#xa;• Stratified&#xa;• Final evaluation&#xa;• Unseen data&#xa;• Performance metrics&#xa;• Business validation" vertex="1">
+          <mxGeometry height="120" width="220" x="220" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;fontSize=10;" value="Model Training">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="800" as="sourcePoint" />
+            <mxPoint x="310" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4CAF50;fontSize=10;" value="Model Evaluation">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="800" as="sourcePoint" />
+            <mxPoint x="530" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="model_training" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontColor=#1565C0;fontSize=11;align=left;verticalAlign=top;" value="Model Training&#xa;&#xa;5 Optimizers Tested:&#xa;• Baseline SGD&#xa;• Adam&#xa;• RMSprop&#xa;• SGD + Momentum&#xa;• Adagrad&#xa;&#xa;Training Configuration:&#xa;• Batch size: 32&#xa;• Max epochs: 100&#xa;• Early stopping&#xa;• Learning rate scheduling" vertex="1">
+          <mxGeometry height="160" width="200" x="180" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="model_eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#AD1457;fontColor=#AD1457;fontSize=11;align=left;verticalAlign=top;" value="Model Evaluation&#xa;&#xa;Performance Metrics:&#xa;• Accuracy&#xa;• Precision&#xa;• Recall&#xa;• F1-Score&#xa;• ROC-AUC&#xa;• Loss&#xa;&#xa;Business Metrics:&#xa;• Churn reduction potential&#xa;• Campaign efficiency&#xa;• ROI estimation" vertex="1">
+          <mxGeometry height="160" width="200" x="430" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#FF9800;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="best_model" value="Best Model Selection">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="1010" as="sourcePoint" />
+            <mxPoint x="420" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="best_model" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4CAF50;strokeColor=#1B5E20;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=left;verticalAlign=top;" value="Production Model&#xa;&#xa;Best Optimizer:&#xa;(Based on F1-Score)&#xa;&#xa;Deployment Ready:&#xa;• Saved as .h5&#xa;• Performance validated&#xa;• Business approved&#xa;&#xa;Ready for:&#xa;• API integration&#xa;• Real-time predictions&#xa;• Batch processing" vertex="1">
+          <mxGeometry height="140" width="180" x="290" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="quality_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#D32F2F;" value="Quality Assurance" vertex="1">
+          <mxGeometry height="30" width="150" x="650" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="quality_items" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57C00;fontColor=#F57C00;align=left;verticalAlign=top;fontSize=10;" value="✓ Data validation&#xa;✓ Feature consistency&#xa;✓ Model monitoring&#xa;✓ Performance tracking&#xa;✓ A/B testing&#xa;✓ Bias detection&#xa;✓ Compliance checks" vertex="1">
+          <mxGeometry height="120" width="150" x="650" y="890" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

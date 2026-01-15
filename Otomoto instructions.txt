@@ -1,0 +1,46 @@
+In the world of marketing, understanding your customer base is crucial. 
+Otomoto decided to leverage machine learning to improve its marketing segmentation.
+Otomoto had a wealth of customer data but struggled to effectively segment its audience. 
+They decided to use machine learning models to optimize their segmentation. 
+At the heart of these models lay optimization algorithms, the tools responsible for improving the model's performance. As the lead ML expert, you are required to optimize the existing artificial neural network model for effective marketing campaigns. 
+
+Assignment Description
+As the lead Machine Learning (ML) expert at Otomoto, your task is to optimize the existing artificial neural network model for effective marketing campaigns. You will use optimization algorithms to improve the model's performance and enhance marketing segmentation. 
+
+Assignment Instructions
+Step 1: Create the Model
+Create an unoptimized ann model using the teleconnect.csv data provided. Review the artificial neural network model used for marketing segmentation. Assess its possible strengths and weaknesses. 
+Step 2: Select Optimization Algorithms
+Choose appropriate optimization algorithms that can enhance the model's performance. Justify your selection based on the specific needs of Otomoto marketing segmentation. 
+Step 3: Apply Optimization Algorithms
+Implement the selected optimization algorithms to the existing model. Document the changes you make and the reasons behind them. 
+Step 4: Evaluate the Optimized Model
+Assess the performance of the optimized model for at least three optimization algorithms.  
+Step 5: Report Your Findings
+Prepare a detailed report explaining your process, the results of the optimization, and recommendations for future improvements. 
+
+Use the data provided teleconnect.csv
+Remember to apply critical thinking throughout the process, use effective visual design in your report, and tell a compelling story about your journey to optimize the model.
+
+
+For visual designs and diagrams, generate xml code that can be rendered in draw.io.
+
+Assignment Tips
+The following could be resourceful. 
+
+Understand the Customer Base: Analyze the customer data available. Identify key characteristics and features that can help in segmenting the audience. 
+Select an Optimization Algorithm: Based on your understanding of the customer data, select an appropriate optimization algorithm for the artificial neural network model. Justify your choice of the algorithm. 
+Implement the Algorithm: Implement the chosen optimization algorithm in the model. Document the process and any challenges encountered. 
+Evaluate the Model: Use appropriate metrics to evaluate the performance of the optimized model. Compare the results with the performance of the original model. 
+Reflect on the Outcome: Reflect on the outcome of the optimization. Did it improve the segmentation? How will this impact the marketing campaigns? 
+
+
+for outputs  include:
+
+Optimized artificial neural network (ANN) model python notebook file.
+Report in Markdown explaining your process, optimization algorithms used, and performance comparison results. 
+Documentation in Markdown outlining the original model, chosen algorithms, and their impact on segmentation results.
+Performance evaluation metrics (e.g., accuracy, precision, recall, F1-score, loss rate) before and after optimization.
+Properly formatted references following phd citation style.
+
+in all reports , where there are any visual designs or diagrams, include the a reference for the generated xml code for draw.io rendering the xml codes should be in a separate folder.
